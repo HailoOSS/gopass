@@ -2,9 +2,12 @@
 
 /*
 gopass is a library for getting hidden input from a terminal.
+
 This library's main use is to allow a user to enter a password at the
 command line without having it echoed to the screen.
+
 The libary currently supports unix systems by manipulating stty.
+
 This code is based upon code by RogerV in the golang-nuts thread:
 https://groups.google.com/group/golang-nuts/browse_thread/thread/40cc41e9d9fc9247
 */
@@ -105,3 +108,4 @@ func catchSignal(fd []uintptr, sig chan os.Signal, brk chan bool) {
 		os.Exit(-1)
 	case <-brk:
 	}
+}
